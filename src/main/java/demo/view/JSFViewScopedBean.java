@@ -8,23 +8,30 @@ import java.util.List;
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 import demo.domain.BootPojo;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-@ManagedBean
-@ViewScoped
+@Component
+@Scope("view")
+@Lazy
 public class JSFViewScopedBean implements Serializable{
 	
 	private static final long serialVersionUID = -6577905732006156661L;
 
 	private String welcomeMessage = "Populated by Custom spring View scoped bean";
-	
+
 	private List<BootPojo> bootPojoList = new ArrayList<>();
 	
 	private List<BootPojo> filteredBootPojoList = new ArrayList<>();
 	
 	@PostConstruct
 	public void populateBootPojoList(){
+		FacesContext facesContext = FacesContext.getCurrentInstance();
+		facesContext.getViewRoot();
 		BootPojo bootPojo0 = new BootPojo("Boot0", "region0");
 		BootPojo bootPojo1 = new BootPojo("Boot1", "region1");
 		BootPojo bootPojo2 = new BootPojo("Boot2", "region2");

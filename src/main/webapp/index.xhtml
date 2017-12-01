@@ -21,9 +21,13 @@
 
 	<h3>JSF Bean -> #{JSFRequestScopedBean.welcomeMessage}</h3>
 
-	<h3>JSF Spring Bean -> #{JSFSpringBean.welcomeMessage}</h3>
+	<h3>JSF Spring Bean -> #{jsfSpringBean.welcomeMessage}</h3>
+
+	<h3>JSF Spring Request Scoped Bean -> #{jsfSpringRequestScopedBean.welcomeMessage}</h3>
 
 	<h3>JSF Custom View Scoped Bean -> #{JSFViewScopedBean.welcomeMessage}</h3>
+
+	<h3>JSF Custom View Scoped Bean -> #{JSFSpringSessionScopedBean.welcomeMessage}</h3>
 
 	<p:inputText value="#{JSFRequestScopedBean.value}" pt:placeholder="Watermark here" />
 

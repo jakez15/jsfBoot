@@ -1,10 +1,12 @@
 package demo.view;
 
+import org.springframework.context.annotation.Scope;
+
 import javax.annotation.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 @ManagedBean
-@RequestScoped
+@Scope("request")
 public class JSFRequestScopedBean {
     
     private String welcomeMessage = "Populated by JSF created bean";
