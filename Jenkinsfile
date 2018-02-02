@@ -20,4 +20,10 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
    }
+
+   stage('Push') {
+    steps {
+      sh './jenkins/scripts/cf-push.sh'
+    }
+   }
 }
