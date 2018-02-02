@@ -20,10 +20,5 @@ node {
      steps {
         sh "/bin/mvn test -B"
      }
-     post {
-        always {
-          junit 'target/surefire-reports/*.xml'
-        }
-     }
    }
 }
