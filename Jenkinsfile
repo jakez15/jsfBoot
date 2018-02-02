@@ -18,7 +18,7 @@ node {
    }
    stage(Test) {
      steps {
-        sh "/bin/mvn test -B"
+        sh "/bin/mvn test"
      }
    }
 }
