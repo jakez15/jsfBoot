@@ -22,8 +22,6 @@ node {
    }
 
    stage('Push') {
-    steps {
       sh './jenkins/scripts/cf-push.sh'
-    }
    }
 }
