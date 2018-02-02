@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.context.ServletContextAware;
+import org.springframework.web.context.request.RequestContextListener;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -29,6 +30,11 @@ public class JSFConfiguration implements ServletContextAware {
     @Override
     public void setServletContext(ServletContext servletContext) {
         servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration", Boolean.TRUE.toString());
+    }
+
+    @Bean
+    public RequestContextListener requestContextListener() {
+        return new RequestContextListener();
     }
 
     @Bean

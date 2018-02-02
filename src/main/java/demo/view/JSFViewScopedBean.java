@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("view")
-@Lazy
 public class JSFViewScopedBean implements Serializable{
 	
 	private static final long serialVersionUID = -6577905732006156661L;

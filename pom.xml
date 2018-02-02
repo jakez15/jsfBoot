@@ -77,7 +77,6 @@
         </activation>
         <properties>
             <tomcat.version>8.0.41</tomcat.version>
-
         </properties>
         <dependencies>
             <dependency>
